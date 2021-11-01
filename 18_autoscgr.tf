@@ -4,7 +4,7 @@ resource "aws_placement_group" "minajeong_pg" {
 }
 
 resource "aws_autoscaling_group" "minajeong_atsg" {
-  name = "minajeong-atsg"
+  name                           = "minajeong-atsg"
   min_size                       = 2
   max_size                       = 8
   health_check_grace_period      = 300
