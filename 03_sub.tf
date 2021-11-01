@@ -41,3 +41,25 @@ resource "aws_subnet" "minajeong_pric" {
     Name = "minajeong-pric"
   }
 }
+
+#가용영역 a의 Private db Subnet
+resource "aws_subnet" "minajeong_pridba" {
+  vpc_id            = aws_vpc.minajeong_vpc.id
+  cidr_block        = "10.0.4.0/24"
+  availability_zone = "ap-northeast-2a"
+
+  tags = {
+    Name = "minajeong-pridba"
+  }
+}
+
+#가용영역 c의 Private db Subnet
+resource "aws_subnet" "minajeong_pridbc" {
+  vpc_id            = aws_vpc.minajeong_vpc.id
+  cidr_block        = "10.0.5.0/24"
+  availability_zone = "ap-northeast-2c"
+
+  tags = {
+    Name = "minajeong-pridbc"
+  }
+}
