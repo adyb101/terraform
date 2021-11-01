@@ -1,4 +1,4 @@
-resource "aws_lb_target_group" "minajeong_lbt" {   
+resource "aws_lb_target_group" "minajeong_lbtg" {   
     name     = "minajeong-1btg"
     port     = 80
     protocol = "HTTP"
